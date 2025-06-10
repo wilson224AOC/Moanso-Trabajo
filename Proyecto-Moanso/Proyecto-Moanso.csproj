@@ -64,6 +64,30 @@
     <Compile Include="Incidencias.Designer.cs">
       <DependentUpon>Incidencias.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaz Almacen .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaz Almacen .Designer.cs">
+      <DependentUpon>Interfaz Almacen .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz Financiero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaz Financiero.Designer.cs">
+      <DependentUpon>Interfaz Financiero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz Ventas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaz Ventas.Designer.cs">
+      <DependentUpon>Interfaz Ventas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="MantenedorClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +153,18 @@
     <EmbeddedResource Include="Incidencias.resx">
       <DependentUpon>Incidencias.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz Almacen .resx">
+      <DependentUpon>Interfaz Almacen .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz Financiero.resx">
+      <DependentUpon>Interfaz Financiero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz Ventas.resx">
+      <DependentUpon>Interfaz Ventas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MantenedorClientes.resx">
       <DependentUpon>MantenedorClientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,6 +188,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="MantenedorProveedor.resx">
       <DependentUpon>MantenedorProveedor.cs</DependentUpon>
@@ -191,6 +228,9 @@
       <Project>{6c5be00e-35c0-41a7-8fdf-917eec52dc0b}</Project>
       <Name>CapaLogica</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

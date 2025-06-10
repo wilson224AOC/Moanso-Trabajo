@@ -16,7 +16,7 @@ namespace Proyecto_Moanso
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new VentaCredito());
+            Application.Run(new Login());
         }
     }
 }
