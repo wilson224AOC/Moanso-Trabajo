@@ -38,6 +38,7 @@ namespace CapaDatos
                 {
                     ENTVentaCredito venC = new ENTVentaCredito();
                     venC.IdVentaCredito = Convert.ToInt32(dr["IdVentaCredito"]);
+                    venC.IdCliente = Convert.ToInt32(dr["IdCliente"]);
                     venC.IdProducto = Convert.ToInt32(dr["IdProducto"]);
                     venC.Cantidad = Convert.ToInt32(dr["Cantidad"]);
                     venC.MontoCredito = Convert.ToDecimal(dr["MontoCredito"]);
@@ -71,6 +72,7 @@ namespace CapaDatos
                 cmd = new SqlCommand("spInsertarVentaCredito", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@IdProducto", venC.IdProducto);
+                cmd.Parameters.AddWithValue("@IdCliente", venC.IdCliente);
                 cmd.Parameters.AddWithValue("@Cantidad", venC.Cantidad);
                 cmd.Parameters.AddWithValue("@MontoCredito", venC.MontoCredito);
                 cmd.Parameters.AddWithValue("@FechaVencimiento", venC.FechaVencimiento);

@@ -23,6 +23,7 @@ namespace Proyecto_Moanso
             CargarProductos();
             CargarEmpleados();
             CargarEstados();
+            CargarCliente();
             groupBox1.Enabled = false;
             ListarVentasCredito();
         }
@@ -40,9 +41,15 @@ namespace Proyecto_Moanso
         }
         private void CargarEmpleados()
         {
-            cbxempleado.DataSource = LOGEmpleado.Instancia.ListarEmpleado(); // Asumiendo que tienes esta clase
-            cbxempleado.DisplayMember = "NombreEmpleado"; // o el campo que corresponda
+            cbxempleado.DataSource = LOGEmpleado.Instancia.ListarEmpleado(); 
+            cbxempleado.DisplayMember = "NombreEmpleado"; 
             cbxempleado.ValueMember = "IdEmpleado";
+        }
+        private void CargarCliente()
+        {
+            cbxcliente.DataSource = LOGClientes.Instancia.ListarCliente();
+            cbxcliente.DisplayMember = "NumeroDocumento";
+            cbxcliente.ValueMember = "IdCliente";
         }
         private void CargarEstados()
         {
@@ -148,6 +155,7 @@ namespace Proyecto_Moanso
 
             ENTProductos producto = (ENTProductos)cbxIdProducto.SelectedItem;
             ENTEmpleado empleado = (ENTEmpleado)cbxempleado.SelectedItem;
+            ENTClientes cliente = (ENTClientes)cbxcliente.SelectedItem;
 
             int cantidad = int.Parse(txtCantidad.Text);
             decimal montoCredito = decimal.Parse(txtMontoCredito.Text);
@@ -159,6 +167,7 @@ namespace Proyecto_Moanso
                 ENTVentaCredito ventaCredito = new ENTVentaCredito
                 {
                     IdProducto = producto.IdProducto,
+                    IdCliente = cliente.IdCliente,
                     Cantidad = cantidad,
                     MontoCredito = montoCredito,
                     FechaVencimiento = dtpFechaVencimiento.Value,
@@ -298,6 +307,16 @@ namespace Proyecto_Moanso
             // Configuración inicial del formulario
             dtpFechaRegistro.Value = DateTime.Now;
             dtpFechaVencimiento.Value = DateTime.Now.AddDays(30);
+        }
+
+        private void cbxcliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbxempleado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

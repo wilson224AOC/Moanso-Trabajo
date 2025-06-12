@@ -10,6 +10,7 @@ namespace CapaEntidad
     {
         public int IdVentaCredito { get; set; }
         public int IdProducto { get; set; }
+        public int IdCliente { get; set; }
         public int Cantidad { get; set; }
         public decimal MontoCredito { get; set; }
         public DateTime FechaVencimiento { get; set; }
