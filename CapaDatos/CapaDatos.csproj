@@ -44,10 +44,12 @@
     <Compile Include="Conexion.cs" />
     <Compile Include="DATClientes.cs" />
     <Compile Include="DATCotizaciones.cs" />
+    <Compile Include="DATDetalleVenta.cs" />
     <Compile Include="DATEgresoFinanciero.cs" />
     <Compile Include="DATEmpleado.cs" />
     <Compile Include="DATIncidencias.cs" />
     <Compile Include="DATNotaEntrada.cs" />
+    <Compile Include="DATNotaSalida.cs" />
     <Compile Include="DATOrdenCompra.cs" />
     <Compile Include="DATProductos.cs" />
     <Compile Include="DATProveedor.cs" />

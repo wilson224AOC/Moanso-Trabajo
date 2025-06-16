@@ -43,10 +43,12 @@
   <ItemGroup>
     <Compile Include="LOGClientes.cs" />
     <Compile Include="LOGCotizaciones.cs" />
+    <Compile Include="LOGDetalleVenta.cs" />
     <Compile Include="LOGEgresoFinanciero.cs" />
     <Compile Include="LOGEmpleado.cs" />
     <Compile Include="LOGIncidencias.cs" />
     <Compile Include="LOGNotaEntrada.cs" />
+    <Compile Include="LOGNotaSalida.cs" />
     <Compile Include="LOGOrdenCompra.cs" />
     <Compile Include="LOGProductos.cs" />
     <Compile Include="LOGProveedor.cs" />

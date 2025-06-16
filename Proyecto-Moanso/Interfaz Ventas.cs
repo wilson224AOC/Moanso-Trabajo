@@ -52,5 +52,17 @@ namespace Proyecto_Moanso
             groupBox1.Controls.Add(formHijoempleado);
             formHijoempleado.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            groupBox1.Controls.Clear();
+            DetalleVenta formhijodetalle = new DetalleVenta();
+            formhijodetalle.TopLevel = false;
+            formhijodetalle.FormBorderStyle = FormBorderStyle.None;
+            formhijodetalle.Dock = DockStyle.Fill;
+
+            groupBox1.Controls.Add(formhijodetalle);
+            formhijodetalle.Show();
+        }
     }
 }

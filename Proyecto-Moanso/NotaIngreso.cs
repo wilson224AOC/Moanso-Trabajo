@@ -21,6 +21,7 @@ namespace Proyecto_Moanso
             CargarOrdenCompra();
             CargarTipoIngreso();
             ListarNotaIngreso();
+            groupBox1.Enabled = false;
         }
 
         private void ListarNotaIngreso()

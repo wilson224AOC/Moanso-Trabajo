@@ -88,5 +88,17 @@ namespace Proyecto_Moanso
             groupBox1.Controls.Add(formHijorequerimiento);
             formHijorequerimiento.Show();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            groupBox1.Controls.Clear();
+            NotaSalida formHijonotasalida = new NotaSalida();
+            formHijonotasalida.TopLevel = false;
+            formHijonotasalida.FormBorderStyle = FormBorderStyle.None;
+            formHijonotasalida.Dock = DockStyle.Fill;
+
+            groupBox1.Controls.Add(formHijonotasalida);
+            formHijonotasalida.Show();
+        }
     }
 }

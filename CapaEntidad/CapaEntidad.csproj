@@ -43,9 +43,11 @@
   <ItemGroup>
     <Compile Include="ENTClientes.cs" />
     <Compile Include="ENTCotizaciones.cs" />
+    <Compile Include="ENTDetalleVenta.cs" />
     <Compile Include="ENTEgresoFinanciero.cs" />
     <Compile Include="ENTIncidencias.cs" />
     <Compile Include="ENTNotaEntrada.cs" />
+    <Compile Include="ENTNotaSalida.cs" />
     <Compile Include="ENTOrdenCompra.cs" />
     <Compile Include="ENTProductos.cs" />
     <Compile Include="ENTProveedor.cs" />

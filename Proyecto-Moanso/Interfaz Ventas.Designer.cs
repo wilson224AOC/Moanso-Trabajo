@@ -39,7 +39,7 @@
             // 
             this.groupBox1.Location = new System.Drawing.Point(134, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1025, 599);
+            this.groupBox1.Size = new System.Drawing.Size(1121, 599);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ventas";
@@ -72,6 +72,7 @@
             this.button3.TabIndex = 3;
             this.button3.Text = "Detalle Venta";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnempleado
             // 
@@ -87,7 +88,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1163, 620);
+            this.ClientSize = new System.Drawing.Size(1260, 620);
             this.Controls.Add(this.btnempleado);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btnventadirecta);

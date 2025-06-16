@@ -52,6 +52,12 @@
     <Compile Include="Cotizaciones.Designer.cs">
       <DependentUpon>Cotizaciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="DetalleVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetalleVenta.Designer.cs">
+      <DependentUpon>DetalleVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="EgresoFrinanciero.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +124,12 @@
     <Compile Include="NotaIngreso.Designer.cs">
       <DependentUpon>NotaIngreso.cs</DependentUpon>
     </Compile>
+    <Compile Include="NotaSalida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotaSalida.Designer.cs">
+      <DependentUpon>NotaSalida.cs</DependentUpon>
+    </Compile>
     <Compile Include="OrdenCompra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +158,9 @@
     </Compile>
     <EmbeddedResource Include="Cotizaciones.resx">
       <DependentUpon>Cotizaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetalleVenta.resx">
+      <DependentUpon>DetalleVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EgresoFrinanciero.resx">
       <DependentUpon>EgresoFrinanciero.cs</DependentUpon>
@@ -176,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NotaIngreso.resx">
       <DependentUpon>NotaIngreso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotaSalida.resx">
+      <DependentUpon>NotaSalida.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OrdenCompra.resx">
       <DependentUpon>OrdenCompra.cs</DependentUpon>
