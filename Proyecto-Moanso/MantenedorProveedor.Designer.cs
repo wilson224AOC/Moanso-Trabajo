@@ -49,6 +49,8 @@
             this.btneditar = new System.Windows.Forms.Button();
             this.btndeshabilitar = new System.Windows.Forms.Button();
             this.btnsalir = new System.Windows.Forms.Button();
+            this.txtUbigeo = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -191,6 +193,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.txtUbigeo);
             this.groupBox1.Controls.Add(this.btnmodificar);
             this.groupBox1.Controls.Add(this.btnagregar);
             this.groupBox1.Controls.Add(this.btncancelar);
@@ -202,7 +206,7 @@
             this.groupBox1.Controls.Add(this.dtpfecharegistro);
             this.groupBox1.Location = new System.Drawing.Point(27, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(783, 165);
+            this.groupBox1.Size = new System.Drawing.Size(783, 189);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Proveedor";
@@ -245,6 +249,22 @@
             this.btnsalir.TabIndex = 20;
             this.btnsalir.Text = "Salir";
             this.btnsalir.UseVisualStyleBackColor = true;
+            // 
+            // txtUbigeo
+            // 
+            this.txtUbigeo.Location = new System.Drawing.Point(116, 139);
+            this.txtUbigeo.Name = "txtUbigeo";
+            this.txtUbigeo.Size = new System.Drawing.Size(178, 22);
+            this.txtUbigeo.TabIndex = 21;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(23, 144);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(52, 16);
+            this.label7.TabIndex = 22;
+            this.label7.Text = "Ubigeo";
             // 
             // MantenedorProveedor
             // 
@@ -296,6 +316,8 @@
         private System.Windows.Forms.Button btneditar;
         private System.Windows.Forms.Button btndeshabilitar;
         private System.Windows.Forms.Button btnsalir;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtUbigeo;
     }
 }
 

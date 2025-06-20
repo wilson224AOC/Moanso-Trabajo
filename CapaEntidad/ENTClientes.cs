@@ -15,5 +15,7 @@ namespace CapaEntidad
         public string Telefono { get; set; }
         public string Gmail { get; set; }
         public DateTime FechaRegistro { get; set; }
+
+        public int Ubigeo { get; set; }
     }
 }

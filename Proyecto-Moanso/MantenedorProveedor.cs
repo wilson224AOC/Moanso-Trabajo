@@ -55,6 +55,8 @@ namespace Proyecto_Moanso
                 prov.Gmail = txtgmail.Text.Trim();
                 prov.Direccion = txtdireccion.Text.Trim();
                 prov.FechaRegistro = dtpfecharegistro.Value;
+                prov.Ubigeo = Convert.ToInt32(txtUbigeo.Text.Trim());
+
 
                 LOGProveedor.Instancia.InsertarProveedor(prov);
                 MessageBox.Show("Se registró correctamente el proveedor", "MENSAJE", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -87,6 +89,7 @@ namespace Proyecto_Moanso
                 prov.Gmail = txtgmail.Text.Trim();
                 prov.Direccion = txtdireccion.Text.Trim();
                 prov.FechaRegistro = dtpfecharegistro.Value;
+                prov.Ubigeo = Convert.ToInt32(txtUbigeo.Text.Trim());
 
                 LOGProveedor.Instancia.EditarProveedor(prov);
                 MessageBox.Show("Se modificó correctamente el poveedor", "MENSAJE", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -150,6 +153,7 @@ namespace Proyecto_Moanso
                 txtgmail.Text = fila.Cells["Gmail"].Value.ToString();
                 txtdireccion.Text = fila.Cells["Direccion"].Value.ToString();
                 dtpfecharegistro.Value = Convert.ToDateTime(fila.Cells["FechaRegistro"].Value);
+                txtUbigeo.Text = fila.Cells["Ubigeo"].Value.ToString();
 
                 groupBox1.Enabled = true;
                 btnagregar.Visible = false;

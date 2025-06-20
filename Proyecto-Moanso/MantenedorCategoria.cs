@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CapaEntidad;
+using CapaLogica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,30 @@ namespace Proyecto_Moanso
         public MantenedorCategoria()
         {
             InitializeComponent();
+            Listarcategoria();
+        }
+
+        private void Listarcategoria()
+        {
+            dataGridView1.DataSource = LOGCategoria.Instancia.ListarCategoria();
+
+
+        }
+
+        private void btnagregar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ENTCategoria cat = new ENTCategoria
+
+                {
+                    NombreCategoria = txtNombreCategoria.Text,
+                    Descripcion = txtDescripcion.Text,
+                    Estado = ckhEstado.Checked,
+
+                }
+            }
+
         }
     }
 }

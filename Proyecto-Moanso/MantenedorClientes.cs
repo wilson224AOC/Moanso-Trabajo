@@ -18,13 +18,18 @@ namespace Proyecto_Moanso
 
         public MantenedorClientes()
         {
+           
             InitializeComponent();
             ListarCliente();
             groupBox1.Enabled = false;
         }
+
+      
+
         private void ListarCliente()
         {
             dataGridView1.DataSource = LOGClientes.Instancia.ListarCliente();
+
         }
         private void LimpiarVariables()
         {
@@ -55,6 +60,7 @@ namespace Proyecto_Moanso
                 cli.Gmail = txtgmail.Text.Trim();
                 cli.Direccion = txtdireccion.Text.Trim();
                 cli.FechaRegistro = dtpregistro.Value;
+                cli.Ubigeo = Convert.ToInt32(txtUbigeo.Text.Trim());
 
                 LOGClientes.Instancia.InsertaCliente(cli);
                 MessageBox.Show("Se registró correctamente el cliente", "MENSAJE", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -87,6 +93,7 @@ namespace Proyecto_Moanso
                 cli.Gmail = txtgmail.Text.Trim();
                 cli.Direccion = txtdireccion.Text.Trim();
                 cli.FechaRegistro = dtpregistro.Value;
+                cli.Ubigeo = Convert.ToInt32(txtUbigeo.Text.Trim());
 
                 LOGClientes.Instancia.EditaCliente(cli);
                 MessageBox.Show("Se modificó correctamente el cliente", "MENSAJE", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -151,6 +158,7 @@ namespace Proyecto_Moanso
                 txtgmail.Text = fila.Cells["Gmail"].Value.ToString();
                 txtdireccion.Text = fila.Cells["Direccion"].Value.ToString();
                 dtpregistro.Value = Convert.ToDateTime(fila.Cells["FechaRegistro"].Value);
+                txtUbigeo.Text = fila.Cells["Ubigeo"].Value.ToString();
 
                 groupBox1.Enabled = true;
                 btnagregar.Visible = false;

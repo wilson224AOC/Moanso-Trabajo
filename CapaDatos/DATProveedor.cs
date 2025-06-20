@@ -44,6 +44,7 @@ namespace CapaDatos
                     prov.Telefono = dr["Telefono"].ToString();
                     prov.Gmail = dr["Gmail"].ToString();
                     prov.FechaRegistro = Convert.ToDateTime(dr["FechaRegistro"]);
+                    prov.Ubigeo = Convert.ToInt32(dr["Ubigeo"]);
                     lista.Add(prov);
                 }
             }
@@ -72,6 +73,8 @@ namespace CapaDatos
                 cmd.Parameters.AddWithValue("@Direccion", prov.Direccion);
                 cmd.Parameters.AddWithValue("@Telefono", prov.Telefono);
                 cmd.Parameters.AddWithValue("@Gmail", prov.Gmail);
+                cmd.Parameters.AddWithValue("@Ubigeo", prov.Ubigeo);
+
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -102,6 +105,7 @@ namespace CapaDatos
                 cmd.Parameters.AddWithValue("@Direccion", prov.Direccion);
                 cmd.Parameters.AddWithValue("@Telefono", prov.Telefono);
                 cmd.Parameters.AddWithValue("@Gmail", prov.Gmail);
+                cmd.Parameters.AddWithValue("@Ubigeo", prov.Ubigeo);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)

@@ -49,6 +49,8 @@
             this.txtdireccion = new System.Windows.Forms.TextBox();
             this.txtgmail = new System.Windows.Forms.TextBox();
             this.txttelefono = new System.Windows.Forms.TextBox();
+            this.txtUbigeo = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -66,11 +68,11 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(21, 255);
+            this.dataGridView1.Location = new System.Drawing.Point(21, 266);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(722, 212);
+            this.dataGridView1.Size = new System.Drawing.Size(722, 201);
             this.dataGridView1.TabIndex = 37;
             // 
             // btnsalir
@@ -132,7 +134,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(83, 155);
+            this.label3.Location = new System.Drawing.Point(83, 146);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 16);
             this.label3.TabIndex = 30;
@@ -158,6 +160,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.txtUbigeo);
             this.groupBox1.Controls.Add(this.btncancelar);
             this.groupBox1.Controls.Add(this.btnmodificar);
             this.groupBox1.Controls.Add(this.btnagregar);
@@ -175,7 +179,7 @@
             this.groupBox1.Controls.Add(this.txttelefono);
             this.groupBox1.Location = new System.Drawing.Point(34, 34);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(839, 201);
+            this.groupBox1.Size = new System.Drawing.Size(839, 226);
             this.groupBox1.TabIndex = 33;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Clientes";
@@ -213,6 +217,9 @@
             // cbxtipodocumento
             // 
             this.cbxtipodocumento.FormattingEnabled = true;
+            this.cbxtipodocumento.Items.AddRange(new object[] {
+            "DNI",
+            "RUC"});
             this.cbxtipodocumento.Location = new System.Drawing.Point(156, 42);
             this.cbxtipodocumento.Name = "cbxtipodocumento";
             this.cbxtipodocumento.Size = new System.Drawing.Size(164, 24);
@@ -234,7 +241,7 @@
             // 
             // txtdireccion
             // 
-            this.txtdireccion.Location = new System.Drawing.Point(156, 152);
+            this.txtdireccion.Location = new System.Drawing.Point(156, 143);
             this.txtdireccion.Name = "txtdireccion";
             this.txtdireccion.Size = new System.Drawing.Size(164, 22);
             this.txtdireccion.TabIndex = 3;
@@ -252,6 +259,22 @@
             this.txttelefono.Name = "txttelefono";
             this.txttelefono.Size = new System.Drawing.Size(190, 22);
             this.txttelefono.TabIndex = 4;
+            // 
+            // txtUbigeo
+            // 
+            this.txtUbigeo.Location = new System.Drawing.Point(156, 188);
+            this.txtUbigeo.Name = "txtUbigeo";
+            this.txtUbigeo.Size = new System.Drawing.Size(164, 22);
+            this.txtUbigeo.TabIndex = 33;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(86, 193);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(52, 16);
+            this.label7.TabIndex = 34;
+            this.label7.Text = "Ubigeo";
             // 
             // MantenedorClientes
             // 
@@ -296,5 +319,7 @@
         private System.Windows.Forms.TextBox txtdireccion;
         private System.Windows.Forms.TextBox txtgmail;
         private System.Windows.Forms.TextBox txttelefono;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtUbigeo;
     }
 }
