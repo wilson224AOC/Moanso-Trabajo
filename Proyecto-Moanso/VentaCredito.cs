@@ -24,12 +24,21 @@ namespace Proyecto_Moanso
             CargarEmpleados();
             CargarEstados();
             CargarCliente();
+            CargarFormaPago();
             groupBox1.Enabled = false;
             ListarVentasCredito();
         }
+
+        private void CargarFormaPago()
+        {
+            cbxformapago.DataSource = LOGFormaPago.Instancia.ListarFormaPago();
+            cbxformapago.DisplayMember = "Nombre";
+            cbxformapago.ValueMember = "IdFormaPago";
+        }
+
         private void CargarProductos()
         {
-            cbxIdProducto.DataSource = LOGProductos.Instancia.ListarProducto(); // Retorna lista de ENTProducto
+            cbxIdProducto.DataSource = LOGProductos.Instancia.ListarProducto();
             cbxIdProducto.DisplayMember = "Nombre";
             cbxIdProducto.ValueMember = "IdProducto";
 
@@ -99,7 +108,6 @@ namespace Proyecto_Moanso
                 decimal saldoPendiente = montoCredito - montoPagado;
                 txtSaldoPendiente.Text = saldoPendiente.ToString("0.00");
 
-                // Actualizar estado automáticamente según el saldo
                 if (saldoPendiente <= 0)
                 {
                     cbxEstado.SelectedItem = "Pagado";
@@ -129,6 +137,7 @@ namespace Proyecto_Moanso
                 listBox1.Items.Add($"Monto Crédito: S/ {montoCredito:0.00}");
                 listBox1.Items.Add($"Monto Pagado: S/ {montoPagado:0.00}");
                 listBox1.Items.Add($"Saldo Pendiente: S/ {saldoPendiente:0.00}");
+                listBox1.Items.Add($"Forma Pago: S/ {cbxformapago.SelectedItem}");
                 listBox1.Items.Add($"Estado: {cbxEstado.SelectedItem}");
                 listBox1.Items.Add($"Vencimiento: {dtpFechaVencimiento.Value.ToShortDateString()}");
             }
@@ -156,6 +165,7 @@ namespace Proyecto_Moanso
             ENTProductos producto = (ENTProductos)cbxIdProducto.SelectedItem;
             ENTEmpleado empleado = (ENTEmpleado)cbxempleado.SelectedItem;
             ENTClientes cliente = (ENTClientes)cbxcliente.SelectedItem;
+            ENTFormaPago formapago = (ENTFormaPago)cbxformapago.SelectedItem;
 
             int cantidad = int.Parse(txtCantidad.Text);
             decimal montoCredito = decimal.Parse(txtMontoCredito.Text);
@@ -169,6 +179,7 @@ namespace Proyecto_Moanso
                     IdProducto = producto.IdProducto,
                     IdCliente = cliente.IdCliente,
                     Cantidad = cantidad,
+                    IdFormaPago = formapago.IdFormaPago,
                     MontoCredito = montoCredito,
                     FechaVencimiento = dtpFechaVencimiento.Value,
                     MontoPagado = montoPagado,
@@ -230,6 +241,8 @@ namespace Proyecto_Moanso
                 cbxIdProducto.SelectedIndex = 0;
             if (cbxempleado.Items.Count > 0)
                 cbxempleado.SelectedIndex = 0;
+            if (cbxformapago.Items.Count > 0)
+                cbxformapago.SelectedIndex = 0;
         }
 
         private void ListarVentasCredito()
@@ -304,7 +317,6 @@ namespace Proyecto_Moanso
         }
         private void VentaCredito_Load(object sender, EventArgs e)
         {
-            // Configuración inicial del formulario
             dtpFechaRegistro.Value = DateTime.Now;
             dtpFechaVencimiento.Value = DateTime.Now.AddDays(30);
         }

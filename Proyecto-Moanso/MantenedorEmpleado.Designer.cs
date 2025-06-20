@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtnombreempleado = new System.Windows.Forms.TextBox();
-            this.txtnumerodocumento = new System.Windows.Forms.TextBox();
-            this.txtcargoempleado = new System.Windows.Forms.TextBox();
-            this.txttelefono = new System.Windows.Forms.TextBox();
-            this.txtgmail = new System.Windows.Forms.TextBox();
-            this.dtpfecharegistro = new System.Windows.Forms.DateTimePicker();
-            this.btnagregar = new System.Windows.Forms.Button();
-            this.btnmodificar = new System.Windows.Forms.Button();
-            this.btncancelar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btncancelar = new System.Windows.Forms.Button();
+            this.btnmodificar = new System.Windows.Forms.Button();
+            this.btnagregar = new System.Windows.Forms.Button();
+            this.dtpfecharegistro = new System.Windows.Forms.DateTimePicker();
+            this.txtcargoempleado = new System.Windows.Forms.TextBox();
+            this.txtgmail = new System.Windows.Forms.TextBox();
+            this.txtnumerodocumento = new System.Windows.Forms.TextBox();
+            this.txttelefono = new System.Windows.Forms.TextBox();
+            this.txtnombreempleado = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnsalir = new System.Windows.Forms.Button();
             this.btndeshabilitar = new System.Windows.Forms.Button();
@@ -77,67 +77,59 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Empleado";
             // 
-            // txtnombreempleado
+            // label6
             // 
-            this.txtnombreempleado.Location = new System.Drawing.Point(138, 45);
-            this.txtnombreempleado.Name = "txtnombreempleado";
-            this.txtnombreempleado.Size = new System.Drawing.Size(176, 22);
-            this.txtnombreempleado.TabIndex = 0;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(334, 146);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(102, 16);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Fecha Registro:";
             // 
-            // txtnumerodocumento
+            // label5
             // 
-            this.txtnumerodocumento.Location = new System.Drawing.Point(138, 92);
-            this.txtnumerodocumento.Name = "txtnumerodocumento";
-            this.txtnumerodocumento.Size = new System.Drawing.Size(176, 22);
-            this.txtnumerodocumento.TabIndex = 0;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(391, 98);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(45, 16);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Gmail:";
             // 
-            // txtcargoempleado
+            // label4
             // 
-            this.txtcargoempleado.Location = new System.Drawing.Point(138, 140);
-            this.txtcargoempleado.Name = "txtcargoempleado";
-            this.txtcargoempleado.Size = new System.Drawing.Size(176, 22);
-            this.txtcargoempleado.TabIndex = 0;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(372, 51);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(64, 16);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Telefono:";
             // 
-            // txttelefono
+            // label3
             // 
-            this.txttelefono.Location = new System.Drawing.Point(442, 45);
-            this.txttelefono.Name = "txttelefono";
-            this.txttelefono.Size = new System.Drawing.Size(176, 22);
-            this.txttelefono.TabIndex = 0;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(23, 146);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(113, 16);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Cargo Empleado:";
             // 
-            // txtgmail
+            // label2
             // 
-            this.txtgmail.Location = new System.Drawing.Point(442, 92);
-            this.txtgmail.Name = "txtgmail";
-            this.txtgmail.Size = new System.Drawing.Size(176, 22);
-            this.txtgmail.TabIndex = 0;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 98);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(130, 16);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Numero Documento:";
             // 
-            // dtpfecharegistro
+            // label1
             // 
-            this.dtpfecharegistro.Location = new System.Drawing.Point(442, 141);
-            this.dtpfecharegistro.Name = "dtpfecharegistro";
-            this.dtpfecharegistro.Size = new System.Drawing.Size(176, 22);
-            this.dtpfecharegistro.TabIndex = 1;
-            // 
-            // btnagregar
-            // 
-            this.btnagregar.Location = new System.Drawing.Point(653, 44);
-            this.btnagregar.Name = "btnagregar";
-            this.btnagregar.Size = new System.Drawing.Size(75, 23);
-            this.btnagregar.TabIndex = 2;
-            this.btnagregar.Text = "Agregar";
-            this.btnagregar.UseVisualStyleBackColor = true;
-            this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
-            // 
-            // btnmodificar
-            // 
-            this.btnmodificar.Location = new System.Drawing.Point(653, 92);
-            this.btnmodificar.Name = "btnmodificar";
-            this.btnmodificar.Size = new System.Drawing.Size(75, 23);
-            this.btnmodificar.TabIndex = 3;
-            this.btnmodificar.Text = "Modificar";
-            this.btnmodificar.UseVisualStyleBackColor = true;
-            this.btnmodificar.Click += new System.EventHandler(this.btnmodificar_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(11, 51);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(125, 16);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Nombre Empleado:";
             // 
             // btncancelar
             // 
@@ -149,65 +141,75 @@
             this.btncancelar.UseVisualStyleBackColor = true;
             this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
             // 
-            // label1
+            // btnmodificar
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 51);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 16);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Nombre Empleado:";
+            this.btnmodificar.Location = new System.Drawing.Point(653, 92);
+            this.btnmodificar.Name = "btnmodificar";
+            this.btnmodificar.Size = new System.Drawing.Size(75, 23);
+            this.btnmodificar.TabIndex = 3;
+            this.btnmodificar.Text = "Modificar";
+            this.btnmodificar.UseVisualStyleBackColor = true;
+            this.btnmodificar.Click += new System.EventHandler(this.btnmodificar_Click);
             // 
-            // label2
+            // btnagregar
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 98);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(130, 16);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Numero Documento:";
+            this.btnagregar.Location = new System.Drawing.Point(653, 44);
+            this.btnagregar.Name = "btnagregar";
+            this.btnagregar.Size = new System.Drawing.Size(75, 23);
+            this.btnagregar.TabIndex = 2;
+            this.btnagregar.Text = "Agregar";
+            this.btnagregar.UseVisualStyleBackColor = true;
+            this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
             // 
-            // label3
+            // dtpfecharegistro
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 146);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 16);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Cargo Empleado:";
+            this.dtpfecharegistro.Location = new System.Drawing.Point(442, 141);
+            this.dtpfecharegistro.Name = "dtpfecharegistro";
+            this.dtpfecharegistro.Size = new System.Drawing.Size(176, 22);
+            this.dtpfecharegistro.TabIndex = 1;
             // 
-            // label4
+            // txtcargoempleado
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(372, 51);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 16);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Telefono:";
+            this.txtcargoempleado.Location = new System.Drawing.Point(138, 140);
+            this.txtcargoempleado.Name = "txtcargoempleado";
+            this.txtcargoempleado.Size = new System.Drawing.Size(176, 22);
+            this.txtcargoempleado.TabIndex = 0;
             // 
-            // label5
+            // txtgmail
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(391, 98);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 16);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Gmail:";
+            this.txtgmail.Location = new System.Drawing.Point(442, 92);
+            this.txtgmail.Name = "txtgmail";
+            this.txtgmail.Size = new System.Drawing.Size(176, 22);
+            this.txtgmail.TabIndex = 0;
             // 
-            // label6
+            // txtnumerodocumento
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(334, 146);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(102, 16);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Fecha Registro:";
+            this.txtnumerodocumento.Location = new System.Drawing.Point(138, 92);
+            this.txtnumerodocumento.Name = "txtnumerodocumento";
+            this.txtnumerodocumento.Size = new System.Drawing.Size(176, 22);
+            this.txtnumerodocumento.TabIndex = 0;
+            // 
+            // txttelefono
+            // 
+            this.txttelefono.Location = new System.Drawing.Point(442, 45);
+            this.txttelefono.Name = "txttelefono";
+            this.txttelefono.Size = new System.Drawing.Size(176, 22);
+            this.txttelefono.TabIndex = 0;
+            // 
+            // txtnombreempleado
+            // 
+            this.txtnombreempleado.Location = new System.Drawing.Point(138, 45);
+            this.txtnombreempleado.Name = "txtnombreempleado";
+            this.txtnombreempleado.Size = new System.Drawing.Size(176, 22);
+            this.txtnombreempleado.TabIndex = 0;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Location = new System.Drawing.Point(25, 267);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(747, 230);

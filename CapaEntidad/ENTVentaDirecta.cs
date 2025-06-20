@@ -10,6 +10,7 @@ namespace CapaEntidad
     {
         public int IdVenta {  get; set; }
         public int IdProducto { get; set; }
+        public int IdFormaPago { get; set; }
         public int Cantidad { get; set; }
         public string NumeroVenta { get; set; }
         public DateTime FechaVenta { get; set; }

@@ -22,7 +22,6 @@ namespace Proyecto_Moanso
             ListarIncidencias();
             groupBox1.Enabled = false;
         }
-
         private void CargarEstados()
         {
             cbxestado.Items.Clear();
@@ -31,7 +30,6 @@ namespace Proyecto_Moanso
             cbxestado.Items.Add("CERRADA");
             cbxestado.SelectedIndex = 0;
         }
-
         private void CargarIncidenciass()
         {
             cbxnotaingreso.DataSource = LOGNotaEntrada.Instancia.ListarNotaIngreso();
@@ -43,13 +41,12 @@ namespace Proyecto_Moanso
         {
             dataGridView1.DataSource = LOGIncidencias.Instancia.ListarIncidencias();
         }
-
         private void Limpiar()
         {
             txttipoincidencia.Clear();
             txtdescripcion.Clear();
-            dtpincidencia.Value = DateTime.Now;
-            dtpregistro.Value = DateTime.Now.AddDays(3);
+            dtpfechaincidencia.Value = DateTime.Now;
+            dtpfecharegistro.Value = DateTime.Now.AddDays(3);
             cbxestado.SelectedIndex = 0;
             txtobservaciones.Clear();
         }
@@ -61,16 +58,16 @@ namespace Proyecto_Moanso
                 ENTIncidencias inc = new ENTIncidencias
                 {
                     IdNotaIngreso = (int)cbxnotaingreso.SelectedValue,
-                    TipoIncidencia  = txttipoincidencia.Text,
+                    TipoIncidencia = txttipoincidencia.Text,
                     Descripcion = txtdescripcion.Text,
-                    FechaIncidencia = dtpincidencia.Value,
+                    FechaIncidencia = dtpfechaincidencia.Value,
                     Estado = cbxestado.SelectedItem.ToString(),
                     Observaciones = txtobservaciones.Text,
-                    FechaRegistro = dtpregistro.Value
+                    FechaRegistro = dtpfecharegistro.Value
                 };
 
                 LOGIncidencias.Instancia.InsertarIncidencias(inc);
-                MessageBox.Show("Incidencias registrada correctamente", "MENSAJE", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Incidencia registrada correctamente", "MENSAJE", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -80,6 +77,7 @@ namespace Proyecto_Moanso
             Limpiar();
             groupBox1.Enabled = false;
             ListarIncidencias();
+
         }
 
         private void btncancelar_Click(object sender, EventArgs e)
@@ -119,6 +117,7 @@ namespace Proyecto_Moanso
             {
                 MessageBox.Show("Selecciona una Incidencia para eliminar", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
         }
     }
 }

@@ -22,7 +22,7 @@ namespace CapaDatos
         }
         #endregion singleton
 
-        #region metodos
+        
         public List<ENTEmpleado> ListarEmpleado()
         {
             SqlCommand cmd = null;
@@ -128,6 +128,6 @@ namespace CapaDatos
                 cmd.ExecuteNonQuery();
             }
         }
-        #endregion metodos
+        //#endregion metodos
     }
 }

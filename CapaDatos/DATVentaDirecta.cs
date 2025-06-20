@@ -40,6 +40,7 @@ namespace CapaDatos
                     ENTVentaDirecta venD = new ENTVentaDirecta();
                     venD.IdVenta = Convert.ToInt32(dr["IdVenta"]);
                     venD.IdProducto = Convert.ToInt32(dr["IdProducto"]);
+                    venD.IdFormaPago = Convert.ToInt32(dr["IdFormaPago"]);
                     venD.Cantidad = Convert.ToInt32(dr["Cantidad"]);
                     venD.NumeroVenta = dr["NumeroVenta"].ToString();
                     venD.FechaVenta = Convert.ToDateTime(dr["FechaVenta"]);
@@ -71,6 +72,7 @@ namespace CapaDatos
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.AddWithValue("@IdProducto", venD.IdProducto);
+                cmd.Parameters.AddWithValue("@IdFormaPago", venD.IdFormaPago);
                 cmd.Parameters.AddWithValue("@Cantidad", venD.Cantidad);
                 cmd.Parameters.AddWithValue("@NumeroVenta", venD.NumeroVenta);
                 cmd.Parameters.AddWithValue("@FechaVenta", venD.FechaVenta);

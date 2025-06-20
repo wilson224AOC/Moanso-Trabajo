@@ -40,6 +40,7 @@ namespace CapaDatos
                     venC.IdVentaCredito = Convert.ToInt32(dr["IdVentaCredito"]);
                     venC.IdCliente = Convert.ToInt32(dr["IdCliente"]);
                     venC.IdProducto = Convert.ToInt32(dr["IdProducto"]);
+                    venC.IdFormaPago = Convert.ToInt32(dr["IdFormaPago"]);
                     venC.Cantidad = Convert.ToInt32(dr["Cantidad"]);
                     venC.MontoCredito = Convert.ToDecimal(dr["MontoCredito"]);
                     venC.FechaVencimiento = Convert.ToDateTime(dr["FechaVencimiento"]);
@@ -73,6 +74,7 @@ namespace CapaDatos
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@IdProducto", venC.IdProducto);
                 cmd.Parameters.AddWithValue("@IdCliente", venC.IdCliente);
+                cmd.Parameters.AddWithValue("@IdFormaPago", venC.IdFormaPago);
                 cmd.Parameters.AddWithValue("@Cantidad", venC.Cantidad);
                 cmd.Parameters.AddWithValue("@MontoCredito", venC.MontoCredito);
                 cmd.Parameters.AddWithValue("@FechaVencimiento", venC.FechaVencimiento);

@@ -20,9 +20,17 @@ namespace Proyecto_Moanso
         {
             InitializeComponent();
             CargarProductos();
+            CargarFormaPago();
             GenerarNumeroVenta();
             groupBox1.Enabled = false;
             ListarVentas();
+        }
+
+        private void CargarFormaPago()
+        {
+            cbxformapago.DataSource = LOGFormaPago.Instancia.ListarFormaPago();
+            cbxformapago.DisplayMember = "Nombre";
+            cbxformapago.ValueMember = "IdFormaPago";
         }
         private void GenerarNumeroVenta()
         {
@@ -68,6 +76,7 @@ namespace Proyecto_Moanso
                 listBox1.Items.Add($"Producto: {producto.Nombre}");
                 listBox1.Items.Add($"Cantidad: {cantidad}");
                 listBox1.Items.Add($"Monto Total: S/ {montoTotal:0.00}");
+                listBox1.Items.Add($"Forma Pago: S/ {cbxformapago.SelectedItem}");
             }
         }
 
@@ -80,15 +89,16 @@ namespace Proyecto_Moanso
             }
 
             ENTProductos producto = (ENTProductos)cbxproducto.SelectedItem;
+            ENTFormaPago formapago = (ENTFormaPago)cbxformapago.SelectedItem;
             decimal precio = producto.PrecioVenta;
             decimal montoTotal = precio * cantidad;
 
-            // Insertar venta directa
             try
             {
                 ENTVentaDirecta venta = new ENTVentaDirecta
                 {
                     IdProducto = producto.IdProducto,
+                    IdFormaPago = formapago.IdFormaPago,
                     Cantidad = cantidad,
                     NumeroVenta = txtnumeroventa.Text,
                     FechaVenta = dateTimePicker1.Value,
@@ -125,6 +135,8 @@ namespace Proyecto_Moanso
             listBox1.Items.Clear();
             dateTimePicker1.Value = DateTime.Now;
             dateTimePicker2.Value = DateTime.Now;
+            if (cbxformapago.Items.Count > 0)
+                cbxformapago.SelectedIndex = 0;
             GenerarNumeroVenta();
         }
         private void ListarVentas()

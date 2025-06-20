@@ -38,6 +38,7 @@ namespace CapaDatos
                 {
                     ENTProductos prod = new ENTProductos();
                     prod.IdProducto = Convert.ToInt32(dr["IdProducto"]);
+                    prod.IdCategoria = Convert.ToInt32(dr["IdCategoria"]);
                     prod.Nombre = dr["Nombre"].ToString();
                     prod.Descripcion = dr["Descripcion"].ToString();
                     prod.Codigo = dr["Codigo"].ToString();
@@ -69,6 +70,7 @@ namespace CapaDatos
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spInsertaProducto", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@IdCategoria", prod.IdCategoria);
                 cmd.Parameters.AddWithValue("@Nombre", prod.Nombre);
                 cmd.Parameters.AddWithValue("@Descripcion", prod.Descripcion);
                 cmd.Parameters.AddWithValue("@Codigo", prod.Codigo);
@@ -101,6 +103,7 @@ namespace CapaDatos
                 cmd = new SqlCommand("spEditaProducto", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@IdProducto", prod.IdProducto);
+                cmd.Parameters.AddWithValue("@IdCategoria", prod.IdCategoria);
                 cmd.Parameters.AddWithValue("@Nombre", prod.Nombre);
                 cmd.Parameters.AddWithValue("@Descripcion", prod.Descripcion);
                 cmd.Parameters.AddWithValue("@Codigo", prod.Codigo);

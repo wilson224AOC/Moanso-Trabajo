@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.cbxcliente = new System.Windows.Forms.ComboBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.btncancelar = new System.Windows.Forms.Button();
             this.btnagregar = new System.Windows.Forms.Button();
@@ -54,14 +56,16 @@
             this.btnsalir = new System.Windows.Forms.Button();
             this.btndeshabilitar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.cbxcliente = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.cbxformapago = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.cbxformapago);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.cbxcliente);
             this.groupBox1.Controls.Add(this.listBox1);
@@ -91,6 +95,24 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Venta Credito";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(113, 156);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(51, 16);
+            this.label10.TabIndex = 22;
+            this.label10.Text = "Cliente:";
+            // 
+            // cbxcliente
+            // 
+            this.cbxcliente.FormattingEnabled = true;
+            this.cbxcliente.Location = new System.Drawing.Point(170, 148);
+            this.cbxcliente.Name = "cbxcliente";
+            this.cbxcliente.Size = new System.Drawing.Size(183, 24);
+            this.cbxcliente.TabIndex = 21;
+            this.cbxcliente.SelectedIndexChanged += new System.EventHandler(this.cbxcliente_SelectedIndexChanged);
             // 
             // listBox1
             // 
@@ -188,7 +210,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(100, 92);
+            this.label2.Location = new System.Drawing.Point(100, 114);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 16);
             this.label2.TabIndex = 10;
@@ -253,14 +275,14 @@
             // 
             // txtMontoCredito
             // 
-            this.txtMontoCredito.Location = new System.Drawing.Point(170, 179);
+            this.txtMontoCredito.Location = new System.Drawing.Point(170, 182);
             this.txtMontoCredito.Name = "txtMontoCredito";
             this.txtMontoCredito.Size = new System.Drawing.Size(183, 22);
             this.txtMontoCredito.TabIndex = 2;
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(170, 86);
+            this.txtCantidad.Location = new System.Drawing.Point(170, 111);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(183, 22);
             this.txtCantidad.TabIndex = 1;
@@ -317,23 +339,22 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // cbxcliente
+            // cbxformapago
             // 
-            this.cbxcliente.FormattingEnabled = true;
-            this.cbxcliente.Location = new System.Drawing.Point(170, 131);
-            this.cbxcliente.Name = "cbxcliente";
-            this.cbxcliente.Size = new System.Drawing.Size(183, 24);
-            this.cbxcliente.TabIndex = 21;
-            this.cbxcliente.SelectedIndexChanged += new System.EventHandler(this.cbxcliente_SelectedIndexChanged);
+            this.cbxformapago.FormattingEnabled = true;
+            this.cbxformapago.Location = new System.Drawing.Point(170, 81);
+            this.cbxformapago.Name = "cbxformapago";
+            this.cbxformapago.Size = new System.Drawing.Size(183, 24);
+            this.cbxformapago.TabIndex = 23;
             // 
-            // label10
+            // label11
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(113, 139);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(51, 16);
-            this.label10.TabIndex = 22;
-            this.label10.Text = "Cliente:";
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(85, 84);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(79, 16);
+            this.label11.TabIndex = 24;
+            this.label11.Text = "FormaPago";
             // 
             // VentaCredito
             // 
@@ -384,5 +405,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cbxcliente;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox cbxformapago;
     }
 }

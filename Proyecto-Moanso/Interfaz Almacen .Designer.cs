@@ -49,7 +49,7 @@
             // 
             // btnordencompra
             // 
-            this.btnordencompra.Location = new System.Drawing.Point(11, 102);
+            this.btnordencompra.Location = new System.Drawing.Point(10, 241);
             this.btnordencompra.Name = "btnordencompra";
             this.btnordencompra.Size = new System.Drawing.Size(112, 47);
             this.btnordencompra.TabIndex = 1;
@@ -59,7 +59,7 @@
             // 
             // btnproveedor
             // 
-            this.btnproveedor.Location = new System.Drawing.Point(11, 176);
+            this.btnproveedor.Location = new System.Drawing.Point(11, 102);
             this.btnproveedor.Name = "btnproveedor";
             this.btnproveedor.Size = new System.Drawing.Size(112, 41);
             this.btnproveedor.TabIndex = 2;
@@ -69,7 +69,7 @@
             // 
             // btnincidencias
             // 
-            this.btnincidencias.Location = new System.Drawing.Point(11, 248);
+            this.btnincidencias.Location = new System.Drawing.Point(10, 375);
             this.btnincidencias.Name = "btnincidencias";
             this.btnincidencias.Size = new System.Drawing.Size(112, 40);
             this.btnincidencias.TabIndex = 3;
@@ -79,7 +79,7 @@
             // 
             // btnnotaentrada
             // 
-            this.btnnotaentrada.Location = new System.Drawing.Point(11, 322);
+            this.btnnotaentrada.Location = new System.Drawing.Point(12, 308);
             this.btnnotaentrada.Name = "btnnotaentrada";
             this.btnnotaentrada.Size = new System.Drawing.Size(112, 42);
             this.btnnotaentrada.TabIndex = 4;
@@ -89,7 +89,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(12, 395);
+            this.button5.Location = new System.Drawing.Point(11, 436);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(111, 39);
             this.button5.TabIndex = 5;
@@ -99,7 +99,7 @@
             // 
             // btnrequerimiento
             // 
-            this.btnrequerimiento.Location = new System.Drawing.Point(12, 467);
+            this.btnrequerimiento.Location = new System.Drawing.Point(12, 174);
             this.btnrequerimiento.Name = "btnrequerimiento";
             this.btnrequerimiento.Size = new System.Drawing.Size(111, 45);
             this.btnrequerimiento.TabIndex = 6;

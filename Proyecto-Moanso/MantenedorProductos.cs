@@ -21,7 +21,16 @@ namespace Proyecto_Moanso
             InitializeComponent();
             ListarProductos();
             groupBox1.Enabled = false;
+            CargarCategorias();
         }
+
+        private void CargarCategorias()
+        {
+            cbxcategoria.DataSource = LOGCategoria.Instancia.ListarCategoria();
+            cbxcategoria.DisplayMember = "NombreCategoria";
+            cbxcategoria.ValueMember = "IdCategoria";
+        }
+
         private void ListarProductos()
         {
             dataGridView1.DataSource = LOGProductos.Instancia.ListarProducto();
@@ -51,6 +60,7 @@ namespace Proyecto_Moanso
                 ENTProductos prod = new ENTProductos();
                 prod.Nombre = txtnombreproducto.Text;
                 prod.Descripcion = txtdescripcion.Text.Trim();
+                prod.IdCategoria = cbxcategoria.SelectedIndex;
                 prod.Codigo = txtcodigo.Text.Trim();
                 prod.PrecioCompra = Convert.ToDecimal(txtpreciocompra.Text.Trim());
                 prod.PrecioVenta = Convert.ToDecimal(txtprecioventa.Text.Trim());
@@ -85,6 +95,7 @@ namespace Proyecto_Moanso
                 prod.IdProducto = idProductoSeleccionado;
                 prod.Nombre = txtnombreproducto.Text;
                 prod.Descripcion = txtdescripcion.Text.Trim();
+                prod.IdCategoria = cbxcategoria.SelectedIndex;
                 prod.Codigo = txtcodigo.Text.Trim();
                 prod.PrecioCompra = Convert.ToDecimal(txtpreciocompra.Text.Trim());
                 prod.PrecioVenta = Convert.ToDecimal(txtprecioventa.Text.Trim());
@@ -149,6 +160,7 @@ namespace Proyecto_Moanso
                 idProductoSeleccionado = Convert.ToInt32(fila.Cells["IdProducto"].Value);
                 txtnombreproducto.Text = fila.Cells["Nombre"].Value.ToString();
                 txtdescripcion.Text = fila.Cells["Descripcion"].Value.ToString();
+                cbxcategoria.SelectedIndex = Convert.ToInt32(fila.Cells["IdCategoria"].Value);
                 txtcodigo.Text = fila.Cells["Codigo"].Value.ToString();
                 txtpreciocompra.Text = fila.Cells["PrecioCompra"].Value.ToString();
                 txtprecioventa.Text = fila.Cells["PrecioVenta"].Value.ToString();

@@ -41,11 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LOGCategoria.cs" />
     <Compile Include="LOGClientes.cs" />
     <Compile Include="LOGCotizaciones.cs" />
     <Compile Include="LOGDetalleVenta.cs" />
     <Compile Include="LOGEgresoFinanciero.cs" />
     <Compile Include="LOGEmpleado.cs" />
+    <Compile Include="LOGFormaPago.cs" />
     <Compile Include="LOGIncidencias.cs" />
     <Compile Include="LOGNotaEntrada.cs" />
     <Compile Include="LOGNotaSalida.cs" />

@@ -94,6 +94,12 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="MantenedorCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenedorCategoria.Designer.cs">
+      <DependentUpon>MantenedorCategoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="MantenedorClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +111,12 @@
     </Compile>
     <Compile Include="MantenedorEmpleado.Designer.cs">
       <DependentUpon>MantenedorEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenedorFormaPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenedorFormaPago.Designer.cs">
+      <DependentUpon>MantenedorFormaPago.cs</DependentUpon>
     </Compile>
     <Compile Include="MantenedorProveedor.cs">
       <SubType>Form</SubType>
@@ -180,11 +192,17 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MantenedorCategoria.resx">
+      <DependentUpon>MantenedorCategoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MantenedorClientes.resx">
       <DependentUpon>MantenedorClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MantenedorEmpleado.resx">
       <DependentUpon>MantenedorEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenedorFormaPago.resx">
+      <DependentUpon>MantenedorFormaPago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MantenedorProductos.resx">
       <DependentUpon>MantenedorProductos.cs</DependentUpon>
