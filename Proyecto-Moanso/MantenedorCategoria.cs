@@ -36,7 +36,7 @@ namespace Proyecto_Moanso
                 {
                     NombreCategoria = txtNombreCategoria.Text,
                     Descripcion = txtDescripcion.Text,
-                    Estado = ckhEstado.Checked,
+                    Estado = ckhEstado.Checked
 
                 }
             }
