@@ -81,6 +81,7 @@
             this.btncancelar.TabIndex = 19;
             this.btncancelar.Text = "Cancelar";
             this.btncancelar.UseVisualStyleBackColor = true;
+            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
             // 
             // btnmodificar
             // 
@@ -90,6 +91,7 @@
             this.btnmodificar.TabIndex = 18;
             this.btnmodificar.Text = "Modificar";
             this.btnmodificar.UseVisualStyleBackColor = true;
+            this.btnmodificar.Click += new System.EventHandler(this.btnmodificar_Click);
             // 
             // btnagregar
             // 
@@ -165,9 +167,9 @@
             this.ckhEstado.AutoSize = true;
             this.ckhEstado.Location = new System.Drawing.Point(146, 146);
             this.ckhEstado.Name = "ckhEstado";
-            this.ckhEstado.Size = new System.Drawing.Size(95, 20);
+            this.ckhEstado.Size = new System.Drawing.Size(91, 20);
             this.ckhEstado.TabIndex = 2;
-            this.ckhEstado.Text = "checkBox1";
+            this.ckhEstado.Text = "Habilitado";
             this.ckhEstado.UseVisualStyleBackColor = true;
             // 
             // txtDescripcion
@@ -220,6 +222,7 @@
             this.btndeshabilitar.TabIndex = 40;
             this.btndeshabilitar.Text = "Deshabilitar";
             this.btndeshabilitar.UseVisualStyleBackColor = true;
+            this.btndeshabilitar.Click += new System.EventHandler(this.btndeshabilitar_Click);
             // 
             // btneditar
             // 
@@ -229,6 +232,7 @@
             this.btneditar.TabIndex = 39;
             this.btneditar.Text = "Editar";
             this.btneditar.UseVisualStyleBackColor = true;
+            this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
             // 
             // MantenedorCategoria
             // 

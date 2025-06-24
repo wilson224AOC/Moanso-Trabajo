@@ -96,7 +96,7 @@ namespace CapaDatos
                 cmd = new SqlCommand("spEditaCategoria", cn);
                 cmd.Parameters.AddWithValue("@NombreCategoria", cat.NombreCategoria);
                 cmd.Parameters.AddWithValue("@Descripcion", cat.Descripcion);
-                cmd.Parameters.AddWithValue("FechaCreacion", cat.FechaCreacion);
+                cmd.Parameters.AddWithValue("@FechaCreacion", cat.FechaCreacion);
                 cmd.Parameters.AddWithValue("@Estado", cat.Estado);
                 cmd.Parameters.AddWithValue("@FechaRegistro", cat.FechaRegistro);
                 cn.Open();
