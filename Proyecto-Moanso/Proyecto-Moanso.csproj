@@ -70,6 +70,12 @@
     <Compile Include="Incidencias.Designer.cs">
       <DependentUpon>Incidencias.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ingreso Financiero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ingreso Financiero.Designer.cs">
+      <DependentUpon>Ingreso Financiero.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interfaz Almacen .cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistroContable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroContable.Designer.cs">
+      <DependentUpon>RegistroContable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Requerimiento Productos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Incidencias.resx">
       <DependentUpon>Incidencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ingreso Financiero.resx">
+      <DependentUpon>Ingreso Financiero.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaz Almacen .resx">
       <DependentUpon>Interfaz Almacen .cs</DependentUpon>
@@ -228,6 +243,9 @@
     </Compile>
     <EmbeddedResource Include="MantenedorProveedor.resx">
       <DependentUpon>MantenedorProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroContable.resx">
+      <DependentUpon>RegistroContable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Requerimiento Productos.resx">
       <DependentUpon>Requerimiento Productos.cs</DependentUpon>

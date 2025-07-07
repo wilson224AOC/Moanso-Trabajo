@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cbxformapago = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.btncancelar = new System.Windows.Forms.Button();
             this.btnagregar = new System.Windows.Forms.Button();
@@ -51,8 +53,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.cbxformapago = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -84,6 +84,24 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Forma Pago";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(37, 128);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(85, 16);
+            this.label6.TabIndex = 39;
+            this.label6.Text = "Forma Pago:";
+            // 
+            // cbxformapago
+            // 
+            this.cbxformapago.FormattingEnabled = true;
+            this.cbxformapago.Location = new System.Drawing.Point(129, 125);
+            this.cbxformapago.Name = "cbxformapago";
+            this.cbxformapago.Size = new System.Drawing.Size(176, 24);
+            this.cbxformapago.TabIndex = 38;
+            this.cbxformapago.SelectedIndexChanged += new System.EventHandler(this.cbxformapago_SelectedIndexChanged);
             // 
             // button2
             // 
@@ -246,6 +264,7 @@
             this.btndeshabilitar.TabIndex = 33;
             this.btndeshabilitar.Text = "Deshabilitar";
             this.btndeshabilitar.UseVisualStyleBackColor = true;
+            this.btndeshabilitar.Click += new System.EventHandler(this.btndeshabilitar_Click);
             // 
             // button1
             // 
@@ -276,23 +295,6 @@
             this.listBox1.Size = new System.Drawing.Size(162, 196);
             this.listBox1.TabIndex = 36;
             // 
-            // cbxformapago
-            // 
-            this.cbxformapago.FormattingEnabled = true;
-            this.cbxformapago.Location = new System.Drawing.Point(129, 125);
-            this.cbxformapago.Name = "cbxformapago";
-            this.cbxformapago.Size = new System.Drawing.Size(176, 24);
-            this.cbxformapago.TabIndex = 38;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(37, 128);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 16);
-            this.label6.TabIndex = 39;
-            this.label6.Text = "Forma Pago:";
-            // 
             // VentaDirecta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -305,7 +307,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Name = "VentaDirecta";
-            this.Text = "VentaDirecta";
+            this.Text = "V";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

@@ -64,5 +64,17 @@ namespace Proyecto_Moanso
             groupBox1.Controls.Add(formhijodetalle);
             formhijodetalle.Show();
         }
+
+        private void btnformapago_Click(object sender, EventArgs e)
+        {
+            groupBox1.Controls.Clear();
+            MantenedorFormaPago formhijoformapago = new MantenedorFormaPago();
+            formhijoformapago.TopLevel = false;
+            formhijoformapago.FormBorderStyle = FormBorderStyle.None;
+            formhijoformapago.Dock = DockStyle.Fill;
+
+            groupBox1.Controls.Add(formhijoformapago);
+            formhijoformapago.Show();
+        }
     }
 }

@@ -288,7 +288,7 @@
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.groupBox1);
             this.Name = "DetalleVenta";
-            this.Text = "DetalleVenta";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.DetalleVenta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaDatos;
 using CapaEntidad;
 using CapaLogica;
 
@@ -155,6 +156,39 @@ namespace Proyecto_Moanso
         {
             groupBox1.Enabled = false;
             Limpiar();
+        }
+
+        private void cbxformapago_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btndeshabilitar_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.CurrentRow != null)
+            {
+                DialogResult result = MessageBox.Show("¿Está seguro de deshabilitar esta venta?",
+                    "CONFIRMAR", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    try
+                    {
+                        int Idventa = Convert.ToInt32(dataGridView1.CurrentRow.Cells["IdVenta"].Value);
+                        DATVentaDirecta.Instancia.DeshabilitaVentaDirecta(Idventa);
+                        MessageBox.Show("Venta deshabilitada correctamente", "MENSAJE", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ListarVentas();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al deshabilitar la venta: " + ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una venta para deshabilitar", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

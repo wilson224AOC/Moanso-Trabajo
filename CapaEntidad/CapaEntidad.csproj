@@ -48,11 +48,13 @@
     <Compile Include="ENTEgresoFinanciero.cs" />
     <Compile Include="ENTFormaPago.cs" />
     <Compile Include="ENTIncidencias.cs" />
+    <Compile Include="ENTIngresoFinanciero.cs" />
     <Compile Include="ENTNotaEntrada.cs" />
     <Compile Include="ENTNotaSalida.cs" />
     <Compile Include="ENTOrdenCompra.cs" />
     <Compile Include="ENTProductos.cs" />
     <Compile Include="ENTProveedor.cs" />
+    <Compile Include="ENTRegistroContable.cs" />
     <Compile Include="ENTRequerimientoProductos.cs" />
     <Compile Include="ENTEmpleado.cs" />
     <Compile Include="ENTVentaCredito.cs" />

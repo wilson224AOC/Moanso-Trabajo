@@ -49,11 +49,13 @@
     <Compile Include="LOGEmpleado.cs" />
     <Compile Include="LOGFormaPago.cs" />
     <Compile Include="LOGIncidencias.cs" />
+    <Compile Include="LOGIngresoFinanciero.cs" />
     <Compile Include="LOGNotaEntrada.cs" />
     <Compile Include="LOGNotaSalida.cs" />
     <Compile Include="LOGOrdenCompra.cs" />
     <Compile Include="LOGProductos.cs" />
     <Compile Include="LOGProveedor.cs" />
+    <Compile Include="LOGRegistroContable.cs" />
     <Compile Include="LOGRequerimientoProductos.cs" />
     <Compile Include="LOGVentaCredito.cs" />
     <Compile Include="LOGVentaDirecta.cs" />

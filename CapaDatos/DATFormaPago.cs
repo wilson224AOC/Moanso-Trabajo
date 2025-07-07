@@ -43,6 +43,7 @@ namespace CapaDatos
                     formp.Descripcion = dr["Descripcion"].ToString();
                     formp.FechaCreacion = Convert.ToDateTime(dr["FechaCreacion"]);
                     formp.DatosBancarios = Convert.ToBoolean(dr["DatosBancarios"]);
+                    formp.DatosBa = dr["DatosBa"].ToString();
                     formp.Estado = Convert.ToBoolean(dr["Estado"]);
                     lista.Add(formp);
                 }
@@ -72,6 +73,7 @@ namespace CapaDatos
                 cmd.Parameters.AddWithValue("@FechaCreacion", formp.FechaCreacion);
                 cmd.Parameters.AddWithValue("@Estado", formp.Estado);
                 cmd.Parameters.AddWithValue("@DatosBancarios", formp.DatosBancarios);
+                cmd.Parameters.AddWithValue("@DatosBa", formp.DatosBa);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -100,6 +102,7 @@ namespace CapaDatos
                 cmd.Parameters.AddWithValue("@FechaCreacion", formp.FechaCreacion);
                 cmd.Parameters.AddWithValue("@Estado", formp.Estado);
                 cmd.Parameters.AddWithValue("@DatosBancarios", formp.DatosBancarios);
+                cmd.Parameters.AddWithValue("@DatosBa", formp.DatosBa);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)

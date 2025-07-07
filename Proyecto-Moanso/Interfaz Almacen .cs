@@ -100,5 +100,17 @@ namespace Proyecto_Moanso
             groupBox1.Controls.Add(formHijonotasalida);
             formHijonotasalida.Show();
         }
+
+        private void btncategoria_Click(object sender, EventArgs e)
+        {
+            groupBox1.Controls.Clear();
+            MantenedorCategoria formHijocategoria = new MantenedorCategoria();
+            formHijocategoria.TopLevel = false;
+            formHijocategoria.FormBorderStyle = FormBorderStyle.None;
+            formHijocategoria.Dock = DockStyle.Fill;
+
+            groupBox1.Controls.Add(formHijocategoria);
+            formHijocategoria.Show();
+        }
     }
 }

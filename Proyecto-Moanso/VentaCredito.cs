@@ -330,5 +330,10 @@ namespace Proyecto_Moanso
         {
 
         }
+
+        private void cbxformapago_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -33,6 +33,7 @@
             this.btnventadirecta = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.btnempleado = new System.Windows.Forms.Button();
+            this.btnformapago = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -46,7 +47,7 @@
             // 
             // btnventacredito
             // 
-            this.btnventacredito.Location = new System.Drawing.Point(12, 242);
+            this.btnventacredito.Location = new System.Drawing.Point(12, 197);
             this.btnventacredito.Name = "btnventacredito";
             this.btnventacredito.Size = new System.Drawing.Size(107, 39);
             this.btnventacredito.TabIndex = 1;
@@ -56,7 +57,7 @@
             // 
             // btnventadirecta
             // 
-            this.btnventadirecta.Location = new System.Drawing.Point(12, 325);
+            this.btnventadirecta.Location = new System.Drawing.Point(12, 270);
             this.btnventadirecta.Name = "btnventadirecta";
             this.btnventadirecta.Size = new System.Drawing.Size(107, 39);
             this.btnventadirecta.TabIndex = 2;
@@ -66,7 +67,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(12, 416);
+            this.button3.Location = new System.Drawing.Point(12, 405);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(107, 37);
             this.button3.TabIndex = 3;
@@ -76,7 +77,7 @@
             // 
             // btnempleado
             // 
-            this.btnempleado.Location = new System.Drawing.Point(12, 150);
+            this.btnempleado.Location = new System.Drawing.Point(12, 124);
             this.btnempleado.Name = "btnempleado";
             this.btnempleado.Size = new System.Drawing.Size(107, 44);
             this.btnempleado.TabIndex = 4;
@@ -84,11 +85,22 @@
             this.btnempleado.UseVisualStyleBackColor = true;
             this.btnempleado.Click += new System.EventHandler(this.btnempleado_Click);
             // 
+            // btnformapago
+            // 
+            this.btnformapago.Location = new System.Drawing.Point(12, 340);
+            this.btnformapago.Name = "btnformapago";
+            this.btnformapago.Size = new System.Drawing.Size(107, 37);
+            this.btnformapago.TabIndex = 5;
+            this.btnformapago.Text = "Forma Pago";
+            this.btnformapago.UseVisualStyleBackColor = true;
+            this.btnformapago.Click += new System.EventHandler(this.btnformapago_Click);
+            // 
             // Interfaz_Ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1260, 620);
+            this.Controls.Add(this.btnformapago);
             this.Controls.Add(this.btnempleado);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btnventadirecta);
@@ -107,5 +119,6 @@
         private System.Windows.Forms.Button btnventadirecta;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnempleado;
+        private System.Windows.Forms.Button btnformapago;
     }
 }

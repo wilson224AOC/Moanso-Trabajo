@@ -50,11 +50,13 @@
     <Compile Include="DATEmpleado.cs" />
     <Compile Include="DATFormaPago.cs" />
     <Compile Include="DATIncidencias.cs" />
+    <Compile Include="DATIngresoFinanciero.cs" />
     <Compile Include="DATNotaEntrada.cs" />
     <Compile Include="DATNotaSalida.cs" />
     <Compile Include="DATOrdenCompra.cs" />
     <Compile Include="DATProductos.cs" />
     <Compile Include="DATProveedor.cs" />
+    <Compile Include="DATRegistroContable.cs" />
     <Compile Include="DATRequerimiento Productos.cs" />
     <Compile Include="DATVentaCredito.cs" />
     <Compile Include="DATVentaDirecta.cs" />

@@ -53,12 +53,10 @@ namespace Proyecto_Moanso
 
                 if (tipoVenta == "Directa")
                 {
-                    // Mostrar solo detalles de venta directa en el DataGridView de arriba
                     dataGridView1.DataSource = LOGVentaDirecta.Instancia.ListarVentaDirecta();
                 }
                 else if (tipoVenta == "Credito")
                 {
-                    // Mostrar solo detalles de venta a crédito en el DataGridView de arriba
                     dataGridView1.DataSource = LOGVentaCredito.Instancia.ListarVentaCredito();
                 }
             }
@@ -92,7 +90,6 @@ namespace Proyecto_Moanso
                         return;
                     }
 
-                    // Estas se cargan igual para ambos casos
                     txtproducto.Text = dataGridView1.CurrentRow.Cells["IdProducto"].Value.ToString();
                     txtcantidad.Text = dataGridView1.CurrentRow.Cells["Cantidad"].Value.ToString();
 

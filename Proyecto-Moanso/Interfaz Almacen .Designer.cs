@@ -36,6 +36,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.btnrequerimiento = new System.Windows.Forms.Button();
             this.btnproducto = new System.Windows.Forms.Button();
+            this.btncategoria = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -117,11 +118,22 @@
             this.btnproducto.UseVisualStyleBackColor = true;
             this.btnproducto.Click += new System.EventHandler(this.btnproducto_Click);
             // 
+            // btncategoria
+            // 
+            this.btncategoria.Location = new System.Drawing.Point(12, 500);
+            this.btncategoria.Name = "btncategoria";
+            this.btncategoria.Size = new System.Drawing.Size(110, 39);
+            this.btncategoria.TabIndex = 8;
+            this.btncategoria.Text = "Categoria";
+            this.btncategoria.UseVisualStyleBackColor = true;
+            this.btncategoria.Click += new System.EventHandler(this.btncategoria_Click);
+            // 
             // Interfaz_Almacen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1140, 612);
+            this.Controls.Add(this.btncategoria);
             this.Controls.Add(this.btnproducto);
             this.Controls.Add(this.btnrequerimiento);
             this.Controls.Add(this.button5);
@@ -146,5 +158,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button btnrequerimiento;
         private System.Windows.Forms.Button btnproducto;
+        private System.Windows.Forms.Button btncategoria;
     }
 }

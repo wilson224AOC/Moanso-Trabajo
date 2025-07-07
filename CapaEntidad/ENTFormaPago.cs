@@ -12,6 +12,7 @@ namespace CapaEntidad
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
         public Boolean DatosBancarios { get; set; }
+        public string DatosBa {  get; set; }
         public Boolean Estado {  get; set; }
         public DateTime FechaCreacion { get; set; }
     }

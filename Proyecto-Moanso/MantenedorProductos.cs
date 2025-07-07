@@ -60,7 +60,7 @@ namespace Proyecto_Moanso
                 ENTProductos prod = new ENTProductos();
                 prod.Nombre = txtnombreproducto.Text;
                 prod.Descripcion = txtdescripcion.Text.Trim();
-                prod.IdCategoria = cbxcategoria.SelectedIndex;
+                prod.IdCategoria = Convert.ToInt32(cbxcategoria.SelectedValue);
                 prod.Codigo = txtcodigo.Text.Trim();
                 prod.PrecioCompra = Convert.ToDecimal(txtpreciocompra.Text.Trim());
                 prod.PrecioVenta = Convert.ToDecimal(txtprecioventa.Text.Trim());
@@ -95,7 +95,7 @@ namespace Proyecto_Moanso
                 prod.IdProducto = idProductoSeleccionado;
                 prod.Nombre = txtnombreproducto.Text;
                 prod.Descripcion = txtdescripcion.Text.Trim();
-                prod.IdCategoria = cbxcategoria.SelectedIndex;
+                prod.IdCategoria = Convert.ToInt32(cbxcategoria.SelectedValue);
                 prod.Codigo = txtcodigo.Text.Trim();
                 prod.PrecioCompra = Convert.ToDecimal(txtpreciocompra.Text.Trim());
                 prod.PrecioVenta = Convert.ToDecimal(txtprecioventa.Text.Trim());
