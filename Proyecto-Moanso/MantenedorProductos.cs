@@ -160,7 +160,7 @@ namespace Proyecto_Moanso
                 idProductoSeleccionado = Convert.ToInt32(fila.Cells["IdProducto"].Value);
                 txtnombreproducto.Text = fila.Cells["Nombre"].Value.ToString();
                 txtdescripcion.Text = fila.Cells["Descripcion"].Value.ToString();
-                cbxcategoria.SelectedIndex = Convert.ToInt32(fila.Cells["IdCategoria"].Value);
+                cbxcategoria.SelectedItem = Convert.ToInt32(fila.Cells["IdCategoria"].Value);
                 txtcodigo.Text = fila.Cells["Codigo"].Value.ToString();
                 txtpreciocompra.Text = fila.Cells["PrecioCompra"].Value.ToString();
                 txtprecioventa.Text = fila.Cells["PrecioVenta"].Value.ToString();

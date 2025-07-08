@@ -40,5 +40,29 @@ namespace Proyecto_Moanso
             groupBox1.Controls.Add(formHijoegreso);
             formHijoegreso.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            groupBox1.Controls.Clear();
+            Ingreso_Financiero formHijoingreso = new Ingreso_Financiero();
+            formHijoingreso.TopLevel = false;
+            formHijoingreso.FormBorderStyle = FormBorderStyle.None;
+            formHijoingreso.Dock = DockStyle.Fill;
+
+            groupBox1.Controls.Add(formHijoingreso);
+            formHijoingreso.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            groupBox1.Controls.Clear();
+            RegistroContable formHijoregistro = new RegistroContable();
+            formHijoregistro.TopLevel = false;
+            formHijoregistro.FormBorderStyle = FormBorderStyle.None;
+            formHijoregistro.Dock = DockStyle.Fill;
+
+            groupBox1.Controls.Add(formHijoregistro);
+            formHijoregistro.Show();
+        }
     }
 }

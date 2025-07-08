@@ -45,7 +45,7 @@ namespace Proyecto_Moanso
         }
         private void Limpiar()
         {
-            cbxcotizacion.SelectedIndex = 0;
+            cbxcotizacion.SelectedItem = 0;
             txtproveedor.Clear();
             txtmontototal.Clear();
             dtpfechaorden.Value = DateTime.Now;

@@ -57,43 +57,41 @@ namespace Proyecto_Moanso
 
         private void btnseleccionar_Click(object sender, EventArgs e)
         {
-            if (dgvmovimiento.CurrentRow != null)
+            if (dgvmovimiento.CurrentRow == null)
             {
-                try
-                {
-                    string tipomovimiento = cbxtipomovimiento.SelectedItem?.ToString();
-
-                    if (tipomovimiento == "Directa")
-                    {
-                        int idEgreso = Convert.ToInt32(dgvmovimiento.CurrentRow.Cells["IdEgreso"].Value);
-                        txtid.Text = idEgreso.ToString();
-
-                        txtmonto.Text = dgvmovimiento.CurrentRow.Cells["Monto"].Value.ToString();
-                    }
-                    else if (tipomovimiento == "Credito")
-                    {
-                        int idIngreso = Convert.ToInt32(dgvmovimiento.CurrentRow.Cells["IdIngreso"].Value);
-                        txtid.Text = idIngreso.ToString();
-
-                        txtmonto.Text = dgvmovimiento.CurrentRow.Cells["Monto"].Value.ToString();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Tipo de movimiento no reconocido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
-
-
-                    MessageBox.Show("Datos cargados correctamente", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al cargar los datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                MessageBox.Show("Por favor selecciona un movimiento de la lista.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
-            else
+
+            try
             {
-                MessageBox.Show("Selecciona un detalle de venta de la lista", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                string tipoSeleccionado = cbxtipomovimiento.SelectedItem?.ToString() ?? "";
+
+                DataGridViewRow filaSeleccionada = dgvmovimiento.CurrentRow;
+
+                switch (tipoSeleccionado)
+                {
+                    case "Ingreso":
+                        txtid.Text = filaSeleccionada.Cells["IdIngreso"].Value?.ToString() ?? "";
+                        txtmonto.Text = filaSeleccionada.Cells["Monto"].Value?.ToString() ?? "";
+                        break;
+
+                    case "Egreso":
+                        txtid.Text = filaSeleccionada.Cells["IdEgreso"].Value?.ToString() ?? "";
+                        txtmonto.Text = filaSeleccionada.Cells["Monto"].Value?.ToString() ?? "";
+                        break;
+
+                    default:
+                        MessageBox.Show("Selecciona un tipo de movimiento válido en el ComboBox.", "Tipo no válido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                }
+
+
+                MessageBox.Show("Datos cargados correctamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error al obtener los datos:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -131,6 +129,8 @@ namespace Proyecto_Moanso
             {
                 MessageBox.Show("Error al registrar detalle de venta: " + ex.Message);
             }
+
+            ListarRegistroContable();
         }
 
         private void txtidregistro_TextChanged(object sender, EventArgs e)

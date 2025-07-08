@@ -76,6 +76,7 @@ namespace Proyecto_Moanso
                 ENTCotizaciones cot = new ENTCotizaciones
                 {
                     IdProveedor = Convert.ToInt32(cbxproveedor.SelectedValue),
+                    IdRequerimiento = Convert.ToInt32(cbxrequerimiento.SelectedValue),
                     FechaCotizacion = dtpcotizaciones.Value,
                     FechaVencimiento = dtpvencimiento.Value,
                     MontoTotal = decimal.Parse(txtmontototal.Text),
